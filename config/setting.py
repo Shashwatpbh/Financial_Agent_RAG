@@ -11,8 +11,8 @@ class Settings(BaseSettings):
     chromadb_collection_name: str
 
     rag_chunk_size: int
-    rag_chunk_overlap: int = 0 
-    rag_top_k: int = 0 
+    rag_chunk_overlap: int
+    rag_top_k: int
     rag_similarity_threshold: float = 0.7
     rag_embedding_model: str = "nomic-embed-text"
 
@@ -20,6 +20,7 @@ class Settings(BaseSettings):
     agent_temperature: float = 0.0
     agent_max_tokens: int = 4096
     agent_max_iterations: int = 10
+    
 
     api_host: str = "0.0.0.0"
     api_port: int = 8080
@@ -30,10 +31,7 @@ class Settings(BaseSettings):
     obs_log_level: str = "INFO"
     obs_log_format: str = "json"
 
-    redis_url: str
-    redis_job_ttl: int
-    
-    model_config = SettingsConfigDict(env_file=".env" , env_file_encoding="utf-8")
+    model_config = SettingsConfigDict(env_file=".env" , env_file_encoding="utf-8" , extra="ignore")
 
 def get_settings()->Settings:
     return Settings()
