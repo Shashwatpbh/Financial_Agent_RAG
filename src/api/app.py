@@ -10,11 +10,11 @@ def create_app()-> FastAPI:
     )
     @app.get("/health")
     async def health_check():
-        return {"status":"healthy"} 
+        return {"status":"healthy shashwat"} 
 
     @app.post("/chat")
     async def chat_endpoint():
-        return{"message" : "chat endpoint"}
+        return{"message" : "chat endpoint ending of the AI - ULTRON"}
 
-    return app 
+    return app
 

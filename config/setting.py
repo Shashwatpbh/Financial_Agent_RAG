@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     agent_max_iterations: int = 10
     
 
-    api_host: str = "0.0.0.0"
+    api_host: str = "0.0.0.0"  #1
     api_port: int = 8080
     api_workers: int = 4
 
