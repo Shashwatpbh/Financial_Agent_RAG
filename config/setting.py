@@ -31,6 +31,12 @@ class Settings(BaseSettings):
     obs_log_level: str = "INFO"
     obs_log_format: str = "json"
 
+    ALPHA_VANTAGE_API_KEY:str      #api keys
+    ALPHA_VANTAGE_API_url:str
+
+    mcp_host:str = "0.0.0.0"
+    mcp_port:int = 8089
+
     model_config = SettingsConfigDict(env_file=".env" , env_file_encoding="utf-8" , extra="ignore")
 
 def get_settings()->Settings:
