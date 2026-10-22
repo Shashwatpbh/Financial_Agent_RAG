@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from config.setting import get_settings
+from config.settings import get_settings
 
 def create_app()-> FastAPI:
     setting = get_settings()
@@ -15,6 +15,7 @@ def create_app()-> FastAPI:
     @app.post("/chat")
     async def chat_endpoint():
         return{"message" : "chat endpoint ending of the AI - ULTRON"}
+    
 
     return app
 

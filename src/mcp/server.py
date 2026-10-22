@@ -1,5 +1,4 @@
 from fastmcp import FastMCP
-
 mcp = FastMCP("financial-mcp-server")
 
 @mcp.tool()
